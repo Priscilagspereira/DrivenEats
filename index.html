@@ -19,23 +19,21 @@
     </div>
 
     <div class="finalização">
-        <button class="teste" >Selecione os 3 itens para fechar o pedido</button>
+        <button class="fechamento" onclick="fecharPedido ()">Selecione os 3 itens para fechar o pedido</button>
     </div>
 
     <div class="pedidos">
         <div class="textoPedir">Primeiro, seu prato</div>
         <div class="pratos">
-            <button data-test="dish" onclick="teste()">
-                <div class="pratodish">
+            <button data-test="dish" onclick="selecionarPrato(this)">
                 <img src="./images/pizza.jpg">
                 <div class="prato"> Pizza grande </div>
                 <div class="descrição">A melhor pizza!</div>
                 <div class="preço" data-test="item-price">R$40,99</div>
                 <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
-                </div>
              </button>
-
-             <button id="teste2" class="selecionado" data-test="dish" onclick="teste()">
+           
+             <button data-test="dish" onclick="selecionarPrato(this)">
                 <img src="./images/pizza.jpg">
                 <div class="prato"> Pizza Média </div>
                 <div class="descrição">A melhor pizza!</div>
@@ -43,7 +41,7 @@
                 <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
              </button>
 
-             <button data-test="dish">
+             <button data-test="dish" onclick="selecionarPrato(this)"> 
                 <img src="./images/pizza.jpg">
                 <div class="prato"> Fatia de pizza </div>
                 <div class="descrição">A melhor pizza!</div>
@@ -53,27 +51,27 @@
          </div>
 
          <div class="textoPedir">Agora, sua bebida</div>
-        <div class="pratos">
-            <button data-test="drink">
+        <div class="bebidas">
+            <button data-test="drink" onclick="selecionarBebida(this)">
                 <img src="./images/limonada.jpg">
-                <div class="prato"> Limonada jarra </div>
+                <div class="bebida"> Limonada jarra </div>
                 <div class="descrição">A melhor limonada!</div>
                 <div class="preço" data-test="item-price">R$15,00</div>
                 <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
                 
              </button>
 
-             <button data-test="drink">
+             <button data-test="drink" onclick="selecionarBebida(this)">
                 <img src="./images/limonada.jpg">
-                <div class="prato"> Limonada média </div>
+                <div class="bebida"> Limonada média </div>
                 <div class="descrição">A melhor limonada!</div>
                 <div class="preço" data-test="item-price">R$10,00</div>
                 <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
              </button>
 
-             <button data-test="drink">
+             <button data-test="drink" onclick="selecionarBebida(this)">
                 <img src="./images/limonada.jpg">
-                <div class="prato"> Limonada pequena </div>
+                <div class="bebida"> Limonada pequena </div>
                 <div class="descrição">A melhor limonada!</div>
                 <div class="preço" data-test="item-price">R$5,00</div>
                 <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
@@ -81,26 +79,26 @@
          </div>
 
          <div class="textoPedir">Por fim, sua sobremesa</div>
-        <div class="pratos">
-            <button data-test="dessert">
+        <div class="sobremesas">
+            <button data-test="dessert" onclick="selecionarSobremesa(this)">
                 <img src="./images/açai.jpg">
-                <div class="prato"> 1L Açaí </div>
+                <div class="sobremesa"> 1L Açaí </div>
                 <div class="descrição">O melhor açaí!</div>
                 <div class="preço" data-test="item-price">R$25,00</div>
                 <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
              </button>
 
-             <button data-test="dessert">
+             <button data-test="dessert" onclick="selecionarSobremesa(this)">
                 <img src="./images/açai.jpg">
-                <div class="prato"> 500ml Açaí </div>
+                <div class="sobremesa"> 500ml Açaí </div>
                 <div class="descrição">O melhor açaí!</div>
                 <div class="preço" data-test="item-price">R$15,00</div>
                 <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
              </button>
 
-             <button data-test="dessert">
+             <button data-test="dessert" onclick="selecionarSobremesa(this)">
                 <img src="./images/açai.jpg">
-                <div class="prato"> 250ml Açaí </div>
+                <div class="sobremesa"> 250ml Açaí </div>
                 <div class="descrição">O melhor açaí!</div>
                 <div class="preço" data-test="item-price">R$10,00</div>
                 <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
@@ -108,8 +106,8 @@
          </div>
         </div>
 
-        <script src="script.js"></script>
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script src="script.js"></script>
 
 </body>
 </html>
